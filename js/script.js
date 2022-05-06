@@ -18,12 +18,21 @@ if (navigator.serviceWorker) {
  */
 function convertClicked() {
   //input
-  const fahrenheit = parseInt(document.getElementById("fahrenheit").value)
+  const angleOne = parseInt(document.getElementById("angle-one").value)
+  const angleTwo = parseInt(document.getElementById("angle-two").value)
+  const angleThree = parseInt(document.getElementById("angle-three").value)
 
   //process
-  const celsius = ((fahrenheit - 32) * 5) / 9
-
-  //output
-  document.getElementById("temperature-in-celsius").innerHTML =
-    "The temperature is: " + celsius.toFixed(2) + " °C!"
+  if ((angleOne == angleTwo) || (angleOne == angleThree) || (angleTwo == angleThree)){
+    "The triangle is an isosceles triangle because two angles are equal!"
+  }
+  else if (angleOne <> angleTwo <> angleThree){
+    "The triangle is a scalene triangle becuase  no angles are equal!"
+  }
+  else if (angleOne == angleTwo == angleThree) {
+    "The triangle is an equilatoral triangle because all three angles are equal!"
+  }
+  else {
+    "You are missing one or more angles!"
+  }
 }
