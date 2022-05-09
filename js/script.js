@@ -23,16 +23,16 @@ function convertClicked() {
   const angleThree = parseInt(document.getElementById("angle-three").value)
 
   //process
-  if (angleOne == angleTwo == angleThree) {
-    "The triangle is an equilatoral triangle because all three angles are equal!"
+  if (angleOne == angleTwo && angleTwo == angleThree) {
+    document.getElementById("type-of-triangle").innerHTML = 
+      "The triangle is an equilatoral triangle because all three angles are equal!"
   }
   else if ((angleOne == angleTwo) || (angleOne == angleThree) || (angleTwo == angleThree)){
+     document.getElementById("type-of-triangle").innerHTML = 
     "The triangle is an isosceles triangle because two angles are equal!"
   }
-  else if (angleOne <> angleTwo <> angleThree){
-    "The triangle is a scalene triangle becuase  no angles are equal!"
-  }
   else {
-    "You are missing one or more angles!"
+     document.getElementById("type-of-triangle").innerHTML = 
+    "The triangle is a scalene triangle becuase  no angles are equal!"
   }
 }
